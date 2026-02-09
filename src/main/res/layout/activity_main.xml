@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <!-- Title-->
+<TextView
+    android:id="@+id/titleTV"
+    android:layout_marginTop="30dp"
+    android:textSize="30sp"
+    android:text="Friend List"
+    android:textStyle="bold"
+    android:textColor="@android:color/secondary_text_light"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+<!-- Subtitle-->
+    <TextView
+        android:id="@+id/subtitleTV"
+        android:textSize="20sp"
+        android:text="Tap To See Friend List"
+        android:textStyle="bold"
+        android:textColor="@android:color/secondary_text_light"
+        app:layout_constraintEnd_toEndOf="@+id/titleTV"
+        app:layout_constraintStart_toStartOf="@id/titleTV"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!-- LISTVIEW-->
+    <ListView
+        android:id="@+id/listview"
+        tools:listitem="@layout/item_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"
+        android:dividerHeight="12dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
